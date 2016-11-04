@@ -1,0 +1,19 @@
+{
+  "name": "scratch",
+  "version": "0.0.1",
+  "description": "several experiments",
+  "main": "bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshgav/scratch.git"
+  },
+  "author": "Josh Gavant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshgav/scratch/issues"
+  },
+  "homepage": "https://github.com/joshgav/scratch#readme"
+}
