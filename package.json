@@ -2,7 +2,7 @@
   "name": "scratch",
   "version": "0.0.1",
   "description": "several experiments",
-  "main": "bootstrap.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/joshgav/scratch/issues"
   },
-  "homepage": "https://github.com/joshgav/scratch#readme"
+  "homepage": "https://github.com/joshgav/scratch#readme",
+  "dependencies": {
+    "applicationinsights": "^0.16.0",
+    "winston": "^2.3.0",
+    "winston-azure-application-insights": "^1.1.0"
+  }
 }
