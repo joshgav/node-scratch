@@ -3,8 +3,7 @@ var winston       = require('winston');
 var app           = require('./package.json');
 
 // start AppInsights data collection
-var ikey = 'ce00d434-39b5-4a5b-bf0f-4fc6ce8380a7';
-process.env.APPINSIGHTS_INSTRUMENTATIONKEY = ikey;
+process.env.APPINSIGHTS_INSTRUMENTATIONKEY = 'afde5aa6-19ba-4c23-8dca-9a0039fb5031';
 appinsights.setup().start();
 
 // capture console.log output as traces
