@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/joshgav/scratch#readme",
   "dependencies": {
-    "applicationinsights": "git+https://github.com/joshgav/applicationinsights-node.js.git#0.17-pre",
+    "applicationinsights": "^0.17.0",
     "winston": "^2.3.0",
     "winston-azure-application-insights": "^1.1.0"
   }
