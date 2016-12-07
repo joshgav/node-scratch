@@ -5,7 +5,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshgav/scratch.git"
+    "url": "https://github.com/joshgav/node-scratch.git"
+  },
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.3"
   },
   "author": "Josh Gavant",
   "license": "MIT",
