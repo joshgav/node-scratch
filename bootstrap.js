@@ -3,7 +3,7 @@ var winston       = require('winston');
 var app           = require('./package.json');
 
 // start AppInsights data collection
-process.env.APPINSIGHTS_INSTRUMENTATIONKEY = 'afde5aa6-19ba-4c23-8dca-9a0039fb5031';
+// APPINSIGHTS_INSTRUMENTATIONKEY env var must be set
 appinsights.setup().start();
 
 // capture console.log output as traces
