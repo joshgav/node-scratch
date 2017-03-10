@@ -1,6 +1,12 @@
+var dotenv        = require('dotenv').config();
 var appinsights   = require('applicationinsights');
 var winston       = require('winston');
 var app           = require('./package.json');
+
+if (!process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
+  process.exitCode = 2;
+  throw new Error("Expected ai env var.");
+}
 
 // start AppInsights data collection
 // APPINSIGHTS_INSTRUMENTATIONKEY env var must be set
