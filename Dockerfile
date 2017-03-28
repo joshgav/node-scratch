@@ -5,11 +5,11 @@ EXPOSE 9229
 
 ARG NODE_ENV
 ENV NODE_ENV $NODE_ENV
-WORKDIR /usr/src/app
 
-COPY package.json /usr/src/app/
+WORKDIR /app
+COPY package.json .
 RUN npm install
-COPY . /usr/src/app
+COPY . .
 
 CMD ["npm", "start"]
 
