@@ -6,14 +6,18 @@ var http = require('http');
 var count = 0;
 var port = process.env.PORT || 8080;
 
+var apm = new appInsights.TelemetryClient();
+
 function basic_listener(req, res) {
   count++;
   console.log(`console: request ${count} received`);
   winston.info(`winston: request ${count} received`);
-  appInsights.getClient().trackTrace('basic_listener received request', 2, req);
+  apm.trackTrace({
+    message: 'basic_listener received request',
+    severity: 3, // so it shows up by default
+  });
   res.writeHead( 200, {"Content-Type": "text/plain"} );
   res.write(`http: response #${count} received\n`);
-  res.write('this is a change\n');
   res.end();
   if (url.parse(req.url).path.startsWith('/stop')) {
     console.log(`Request to: ${req.url}`);
@@ -34,4 +38,3 @@ http_server.listen(port);
 
 console.log(`console: http server listening on port ${port}`);
 winston.info(`winston: http server listening on port ${port}`);
-

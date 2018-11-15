@@ -18,5 +18,4 @@ appInsights.setup()
   .start();
 
 // run the user's app
-// require('./package.json').main;
-
+require('./' + require('./package.json').main);
