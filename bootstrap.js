@@ -1,13 +1,12 @@
-const dotenv        = require('dotenv').config();
-const appInsights   = require('applicationinsights');
-
+const dotenv = require('dotenv')
+dotenv.config({ path: ".env" })
+dotenv.config({ path: "run.env" })
 if (!process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
   process.exitCode = 2;
-  throw new Error("Expected ai env var.");
+  throw new Error("set app insights ikey as APPINSIGHTS_INSTRUMENTATIONKEY");
 }
+const appInsights = require('applicationinsights')
 
-// start AppInsights data collection
-// APPINSIGHTS_INSTRUMENTATIONKEY env var must be set
 appInsights.setup()
   .setAutoDependencyCorrelation(true)
   .setAutoCollectConsole(true)

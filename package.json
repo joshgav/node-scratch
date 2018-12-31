@@ -4,7 +4,7 @@
   "description": "several experiments",
   "main": "index.js",
   "scripts": {
-    "start": "node --inspect=0.0.0.0:9229 ./bootstrap.js",
+    "start": "node ./bootstrap.js",
     "build": "npm install"
   },
   "repository": {
@@ -12,8 +12,8 @@
     "url": "https://github.com/joshgav/node-scratch.git"
   },
   "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+    "node": ">=10",
+    "npm": ">=5"
   },
   "author": "Josh Gavant",
   "license": "MIT",
